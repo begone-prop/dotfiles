@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+#General
+alias cp="cp -i"
+alias nv='nvim'
+alias ll='ls -lh'
+alias z='zathura --fork'
+alias v='vim'
+alias n='nvim'
+alias sv='sxiv'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -c'
+alias la='ls -A'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+alias szp='source ~/.config/zsh/zprompt'
+
+#Shortcuts
+alias vv='vim ~/.vim/vimrc'
+alias nn='nvim ~/.config/nvim/conf/'
+alias zz='nvim ~/.config/zsh/.zshrc'
+alias zp='nvim ~/.zprofile'
+alias za='nvim ~/.config/zsh/aliases'
+alias s='cd ~/.scripts'
+alias xx='vim ~/.Xresources'
+alias mpvq='mpv --no-audio-display'
+
+#Actions
+alias tql='sudo tail -f /var/log/dnscrypt-proxy/query.log'
+alias tdl='sudo tail -f /var/log/dnscrypt-proxy/blocked.log'
+alias serv='python -m http.server'
+alias dotf='/usr/bin/git --git-dir=$HOME/repos/dotfiles/ --work-tree=$HOME'

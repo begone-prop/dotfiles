@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+#source ~/.cache/wal/colors.sh
+
+source $ZDOTDIR/themes/gruvbox
+
+#Prompts
+PROMPT='%F{$color6}%n %F{$color2}%c %B%F{$color4}->%f '
+
+RPROMPT='\
+%F{$color4 }${MODE_INDICATOR_PROMPT}\
+%F{$color2 }∙\
+%F{$color3 }$(atemp)\
+%F{$color10}%BºC\
+%F{$color2 }∙\
+%F{$color5 }%M'
