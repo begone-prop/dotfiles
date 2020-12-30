@@ -1,0 +1,20 @@
+#!/bin/sh
+
+links=$(sed "s/\s*#.*//g; /^\s*$/d; s/\s+$//" "$1")
+num=$(grep -c ^h "$1")
+grep -q deezer "$1"; type="$?"
+
+down() { i=0
+    for link in $links; do
+        eval "$1" "$link"
+        echo "Downloaded $((i+=1)) of $num"
+    done
+}
+
+case $type in
+    0 ) site="deemix"
+        [ -z "$(pgrep openvpn)" ] || down $site;;
+
+    1 ) site="youtube-dl --extract-audio --audio-format mp3"
+        grep -Eq 'youtube|youtu.be' "$1" && down "$site";;
+esac 

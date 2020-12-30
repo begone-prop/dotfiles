@@ -1,0 +1,9 @@
+#!/bin/sh
+#Script that opens the man page of an
+#installed program in PDF format
+
+man -Tpdf "$1" | zathura --fork -
+
+#TODO
+#Check to see if the man page exists
+#man -k . | cut -d' ' -f 1 
