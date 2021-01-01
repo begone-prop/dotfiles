@@ -15,6 +15,9 @@ HISTFILE=$XDG_CACHE_HOME/zsh/history
 setopt autocd
 stty stop undef
 
+#Source aliases
+source $ZDOTDIR/aliases
+
 #Autocomplete aliases
 setopt complete_aliases
 # Basic auto/tab complete:
@@ -27,9 +30,6 @@ _comp_options+=(globdots)
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-
-#Source aliases
-source $ZDOTDIR/aliases
 
 #Vim mode
 source $ZDOTDIR/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh 2>/dev/null
