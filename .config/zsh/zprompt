@@ -5,7 +5,7 @@
 source $ZDOTDIR/themes/gruvbox
 
 #Prompts
-PROMPT='%F{$color6}%n %F{$color2}%c %B%F{$color4}->%f '
+PROMPT='%F{$color6}%n %F{$color2}%c %B%F{$color4}-> '
 
 RPROMPT='\
 %F{$color4 }${MODE_INDICATOR_PROMPT}\

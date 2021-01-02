@@ -1,10 +1,5 @@
 #!/bin/zsh
 
-#Default programs
-export PATH=$HOME/.local/scripts:$PATH
-export EDITOR="nvim"
-export BROWSER="firefox"
-export READER="zathura"
 
 #XDG, cleans up ~/
 export XDG_CONFIG_HOME="$HOME/.config"

@@ -3,6 +3,12 @@ autoload -U colors && colors
 source $XDG_CACHE_HOME/wal/colors-tty.sh
 setopt PROMPT_SUBST
 
+#Default programs
+export PATH=$HOME/.local/scripts:$PATH
+export EDITOR="nvim"
+export BROWSER="firefox"
+export READER="zathura"
+
 #Defaults
 #export TERM=rxvt-unicode-256color
 
