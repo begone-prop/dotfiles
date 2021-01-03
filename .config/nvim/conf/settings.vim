@@ -7,6 +7,7 @@ set incsearch
 set nohlsearch
 set nocompatible
 "set cursorline
+set clipboard+=unnamedplus
 
 set smartindent
 set smartcase
