@@ -21,6 +21,8 @@ Plug 'morhetz/gruvbox'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'pangloss/vim-javascript'
+Plug 'mattn/emmet-vim'
+Plug 'turbio/bracey.vim', {'do': 'npm install -prefix server'}
 call plug#end()
 
 "Inactive:
@@ -31,6 +33,4 @@ call plug#end()
 "Plug 'https://gitlab.com/ceda_ei/vcf.vim.git'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'itchyny/lightline.vim'
-"Plug 'mattn/emmet-vim'
-"Plug 'turbio/bracey.vim', {'do': 'npm install -prefix server'}
 "Plug 'ryanoasis/vim-devicons'
