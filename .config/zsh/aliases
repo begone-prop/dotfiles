@@ -23,7 +23,8 @@ alias zp='nvim ~/.zprofile'
 alias za='nvim ~/.config/zsh/aliases'
 alias s='cd ~/.scripts'
 alias xx='vim ~/.Xresources'
-alias mpvq='mpv --no-audio-display'
+alias smpv='setsid -f mpv'
+alias smpvq='setsid -f mpv --no-audio-display'
 
 #Actions
 alias tql='sudo tail -f /var/log/dnscrypt-proxy/query.log'

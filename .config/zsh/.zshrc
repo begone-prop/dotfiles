@@ -21,11 +21,12 @@ HISTFILE=$XDG_CACHE_HOME/zsh/history
 setopt autocd
 stty stop undef
 
+#Autocomplete aliases
+setopt complete_aliases
+
 #Source aliases
 source $ZDOTDIR/aliases
 
-#Autocomplete aliases
-setopt complete_aliases
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
