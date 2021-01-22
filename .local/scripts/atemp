@@ -1,3 +1,0 @@
-#!/bin/zsh
-atemp=$(($(paste -sd+ < /sys/class/thermal/thermal_zone*/temp | bc ) / 3000))
-echo "$atemp"
