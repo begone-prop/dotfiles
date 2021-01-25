@@ -7,6 +7,8 @@ endif
 
 set t_Co=256
 set background=dark
+set termguicolors
+highlight Normal guibg=none
 
 "let g:gruvbox_material_background = 'hard'
 let g:gruvbox_contrast_dark = 'hard'

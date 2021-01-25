@@ -14,7 +14,8 @@ set smartcase
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-set termguicolors
+set scrolloff=8
+set updatetime=50
 
 filetype plugin on
 set laststatus=2
