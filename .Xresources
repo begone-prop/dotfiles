@@ -21,8 +21,16 @@ Xft.hinting:    true
 Xft.hintstyle:  hintfull
 
 ! -- Colors -- !
-URxvt.depth: 24
+*.depth: 24
 *.alpha: 1
+
+! -- DWM colors -- !
+dwm.normbordercolor: #689d6a
+dwm.normbgcolor:     #d79921
+dwm.normfgcolor:     #000000
+dwm.selbordercolor:  #d79921
+dwm.selbgcolor:      #fd4934
+dwm.selfgcolor:      #98971a
 
 ! - Gruvbox - !
 !*background: #282828
