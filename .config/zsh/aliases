@@ -2,7 +2,6 @@
 
 #General
 alias cp="cp -i"
-alias nv='nvim'
 alias ll='ls -lh'
 alias z='zathura --fork'
 alias v='vim'
