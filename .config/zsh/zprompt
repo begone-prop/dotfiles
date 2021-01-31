@@ -1,8 +1,7 @@
 #!/bin/zsh
 
-#source ~/.cache/wal/colors.sh
-
-source $ZDOTDIR/themes/gruvbox
+source ~/.cache/wal/colors.sh
+#source $ZDOTDIR/themes/gruvbox
 
 #Prompts
 PROMPT='%F{$color6}%n %F{$color2}%c %B%F{$color4}->%f '
