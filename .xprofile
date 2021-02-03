@@ -1,0 +1,4 @@
+[ -f ~/.config/wall.png ] && xwallpaper --zoom ~/.config/wall.png
+xcompmgr &
+unclutter &
+dwmblocks &
