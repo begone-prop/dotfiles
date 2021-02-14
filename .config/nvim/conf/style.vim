@@ -8,13 +8,13 @@ endif
 set t_Co=256
 set background=dark
 set termguicolors
-highlight Normal guibg=none
-
 "let g:gruvbox_material_background = 'hard'
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection = 0
 let g:gruvbox_improved_strings = 0
 colorscheme gruvbox
+highlight Normal guibg=none
+
 
 "Airline
 let g:airline_theme = 'gruvbox'
