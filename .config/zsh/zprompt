@@ -1,15 +1,11 @@
 #!/bin/zsh
 
 source ~/.cache/wal/colors.sh
-#source $ZDOTDIR/themes/gruvbox
 
 #Prompts
 PROMPT='%F{$color6}%n %F{$color2}%c %B%F{$color4}->%f '
 
 RPROMPT='\
 %F{$color4 }${MODE_INDICATOR_PROMPT}\
-%F{$color2 }∙\
-%F{$color3 }$(head -c 2 /sys/class/thermal/thermal_zone2/temp)\
-%F{$color10}%BºC\
 %F{$color2 }∙\
 %F{$color5 }%M'
