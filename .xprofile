@@ -1,4 +1,6 @@
-[ -f ~/.config/wall.png ] && xwallpaper --zoom ~/.config/wall.png
+#[ -f ~/.config/wall.png ] && xwallpaper --zoom ~/.config/wall.png
+[ -f ~/.fehbg ] && ~/.fehbg
+
 xcompmgr &
 unclutter &
 dwmblocks &

@@ -1,3 +1,7 @@
 [ -f /etc/xprofile ] && . /etc/xprofile
-[ -f ~/.xprofile ] && . ~/.xprofile
+[ -f ~/.fehbg ] && ~/.fehbg
+
+xcompmgr &
+unclutter &
+dwmblocks &
 exec dwm
