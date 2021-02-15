@@ -1,8 +1,11 @@
 #!/bin/sh
 
-while read file
+dir=$(pwd)
+while read -r file
 do
     case "$1" in
         "C-d") rm "$file";;
+        "C-t") feh --bg-tile "$file";;
+        "c") echo "$dir/$file" | xclip -r -sel clipboard && notify-send "Copied $file path to clipboard";;
     esac
 done
