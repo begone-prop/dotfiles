@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-
 #XDG, cleans up ~/
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -23,4 +22,5 @@ export VSCODE_PORTABLE="$XDG_DATA_HOME"/vscode
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 #export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
-~/.scripts/shell/blight a
+#Scripts to run at login
+$HOME/.local/bin/blight l
