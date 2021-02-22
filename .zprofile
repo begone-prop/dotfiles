@@ -4,11 +4,11 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
-export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
-export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+export GOPATH="$XDG_DATA_HOME/go"
+export HISTFILE="$XDG_DATA_HOME/history"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export LESSHISTFILE=-
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
