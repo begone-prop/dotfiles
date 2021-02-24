@@ -32,6 +32,6 @@ fi
 [ -f ~/.fehbg ] && ~/.fehbg
 
 xcompmgr &
-nclutter &
+unclutter &
 dwmblocks &
 exec dwm

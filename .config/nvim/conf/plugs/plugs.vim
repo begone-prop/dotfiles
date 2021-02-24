@@ -23,6 +23,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'turbio/bracey.vim', {'do': 'npm install -prefix server'}
+Plug '~/.config/nvim/autoload/plugged/dracula_pro'
 call plug#end()
 
 "Inactive:
