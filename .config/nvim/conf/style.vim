@@ -6,15 +6,15 @@ if exists('+termguicolors')
 endif
 
 set t_Co=256
-"set background=dark
+set background=dark
 set termguicolors
-highlight Normal guibg=none
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection = 0
 let g:gruvbox_improved_strings = 0
 let g:dracula_colorterm = 0
 colorscheme dracula_pro
+highlight Normal guibg=none
 
 "Airline
 let g:airline_theme = 'kolor'
@@ -24,11 +24,10 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extension#tabline#formatter = 'default'
 
 
-
 "Airline themes:
 "simple light deus powerlineish solarized light solarized dark
 "luna wombat molokai bubblegum jellybeans laederon ubaryd tomorrow
-"base16 base16-spacemacs murmur sol papercolor Cobalt 2 distinguished
+"base16 base16-spacemacs murmur sol papercolor cobalt 2 distinguished
 "minimalist violet fruit punch angr badwolf base16 behelit bubblegum dark
 "durant hybridline hybrid jellybeans kalisi kolor laederon light
 "lucius luna molokai monochrome murmur papercolor powerlineish raven
