@@ -1,6 +1,11 @@
-#[ -f ~/.config/wall.png ] && xwallpaper --zoom ~/.config/wall.png
+#!/bin/sh
+#Set wallpaper
 [ -f ~/.fehbg ] && ~/.fehbg
 
+#Start some programs
 xcompmgr &
 unclutter &
 dwmblocks &
+
+#Make sure clock is in sync
+(sleep $((60 - $(date +%S))) && pkill dwmblocks && setsid -f dwmblocks) &
