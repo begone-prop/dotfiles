@@ -2,7 +2,7 @@
 
 #General
 alias cp="cp -i"
-alias z='zathura --fork'
+alias z='zathura'
 alias v='vim'
 alias n='nvim'
 alias sv='sxiv'

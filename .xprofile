@@ -1,4 +1,5 @@
 #!/bin/sh
+
 #Set wallpaper
 [ -f ~/.fehbg ] && ~/.fehbg
 
@@ -7,5 +8,5 @@ xcompmgr &
 unclutter &
 dwmblocks &
 
-#Make sure clock is in sync
+#Make sure clock is synced
 (sleep $((60 - $(date +%S))) && pkill dwmblocks && setsid -f dwmblocks) &
