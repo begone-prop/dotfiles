@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Exit script if a DE or WM other than DWM is used
+pidof dwm || exit
+
 #Set wallpaper
 [ -f ~/.fehbg ] && ~/.fehbg
 
