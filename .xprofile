@@ -1,15 +1,12 @@
 #!/bin/sh
 
-#Exit script if a DE or WM other than DWM is used
-pidof dwm || exit
-
 #Set wallpaper
 [ -f ~/.fehbg ] && ~/.fehbg
 
 #Start some programs
+dwmblocks &
 xcompmgr &
 unclutter &
-dwmblocks &
 
 #Make sure clock is synced
-(sleep $((60 - $(date +%S))) && pkill dwmblocks && setsid -f dwmblocks) &
+{ sleep $((60 - $(date +%S))) && pkill dwmblocks && setsid -f dwmblocks ; } &
