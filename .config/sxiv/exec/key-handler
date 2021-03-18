@@ -6,6 +6,8 @@ do
     case "$1" in
         "C-d") rm "$file";;
         "C-t") feh --bg-tile "$file";;
+        "C-w") feh --bg-center "$file";;
+        "C-f") feh --bg-fill "$file";;
         "c") echo "$dir/$file" | xclip -r -sel clipboard && notify-send "Copied $file path to clipboard";;
     esac
 done

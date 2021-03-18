@@ -24,5 +24,8 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 export PAGER="/usr/bin/slit"
 export MANPAGER="nvim -c 'set ft=man' -"
+
+export PRIMARY_COLOR="#1d2aff"
+
 #Scripts to run at login
 $HOME/.local/bin/blight l

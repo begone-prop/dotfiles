@@ -13,11 +13,11 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection = 0
 let g:gruvbox_improved_strings = 0
 let g:dracula_colorterm = 0
-colorscheme gruvbox
+colorscheme dracula_pro
 highlight Normal guibg=none
 
 "Airline
-let g:airline_theme = 'violet'
+let g:airline_theme = 'angr'
 let g:airline_powerline_fonts = 1
 let g:airline#extension#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
