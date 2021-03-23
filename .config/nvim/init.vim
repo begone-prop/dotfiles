@@ -11,7 +11,7 @@ source $HOME/.config/nvim/conf/plugs/plugs.vim
 source $HOME/.config/nvim/conf/plugs/nerd-commenter.vim
 source $HOME/.config/nvim/conf/plugs/vim-python.vim
 source $HOME/.config/nvim/conf/plugs/emmet.vim
-source $HOME/.config/nvim/conf/plugs/coc.vim
+"source $HOME/.config/nvim/conf/plugs/coc.vim
 
 "Source style
 source $HOME/.config/nvim/conf/style.vim

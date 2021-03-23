@@ -4,7 +4,7 @@ dir=$(pwd)
 while read -r file
 do
     case "$1" in
-        "C-d") rm "$file";;
+        "d") rm "$file";;
         "C-t") feh --bg-tile "$file";;
         "C-w") feh --bg-center "$file";;
         "C-f") feh --bg-fill "$file";;
