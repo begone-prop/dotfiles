@@ -7,6 +7,4 @@
 dwmblocks &
 xcompmgr &
 unclutter &
-
-#Make sure clock is synced
-{ sleep $((60 - $(date +%S))) && pkill dwmblocks && setsid -f dwmblocks ; } &
+xset r rate 300 50 &

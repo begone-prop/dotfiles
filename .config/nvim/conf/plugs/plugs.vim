@@ -4,7 +4,6 @@
 "   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
@@ -23,14 +22,16 @@ Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'turbio/bracey.vim', {'do': 'npm install -prefix server'}
 Plug '~/.config/nvim/autoload/plugged/dracula_pro'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 "Inactive:
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'vim-python/python-syntax'
-"Plug 'arcticicestudio/nord-vim'
 "Plug 'rafi/awesome-vim-colorschemes'
 "Plug 'junegunn/goyo.vim'
 "Plug 'preservim/nerdtree'
 "Plug 'https://gitlab.com/ceda_ei/vcf.vim.git'
 "Plug 'itchyny/lightline.vim'
 "Plug 'ryanoasis/vim-devicons'
+"Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}

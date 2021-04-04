@@ -5,9 +5,11 @@ while read -r file
 do
     case "$1" in
         "d") rm "$file";;
-        "C-t") feh --bg-tile "$file";;
-        "C-w") feh --bg-center "$file";;
-        "C-f") feh --bg-fill "$file";;
+        #"t") feh --bg-tile "$file";;
+        #"f") feh --bg-fill "$file";;
+        #"z") feh --bg-center "$file";;
+        #"T") wal -q -i "$file";;
         "c") echo "$dir/$file" | xclip -r -sel clipboard && notify-send "Copied $file path to clipboard";;
+        #"w") themeset "$file";;
     esac
 done

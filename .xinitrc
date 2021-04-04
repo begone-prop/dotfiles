@@ -32,5 +32,5 @@ fi
 [ -f ~/xprofile ] && . ~/xprofile
 
 while true; do
-    dwm 2> ~/misc/dwm.log
+    dwm
 done
