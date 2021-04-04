@@ -1,15 +1,16 @@
 #!/bin/sh
 
+setbg() {
+    method=$(printf "center\nfill\nmax\nscale\ntile" | dmenu -i -p "Choose method:")
+    [ -n "$method" ] && feh --bg-"$method" "$1"
+}
+
 dir=$(pwd)
-while read -r file
-do
+while read -r file; do
     case "$1" in
-        "d") rm "$file";;
-        #"t") feh --bg-tile "$file";;
-        #"f") feh --bg-fill "$file";;
-        #"z") feh --bg-center "$file";;
-        #"T") wal -q -i "$file";;
-        "c") echo "$dir/$file" | xclip -r -sel clipboard && notify-send "Copied $file path to clipboard";;
-        #"w") themeset "$file";;
+        "d") [ -z "$choice" ] && choice=$(printf "Yes\nNo" | dmenu -i -p "Are you sure?")
+            [ "$choice" = "Yes" ] && rm "$file";;
+        "c") echo "$dir/$file" | xclip -r -sel clipboard && notify-send "Copied filepath to clipboard";;
+        "w") setbg "$file";;
     esac
 done
