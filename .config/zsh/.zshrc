@@ -4,7 +4,6 @@ source $XDG_CACHE_HOME/wal/colors-tty.sh
 setopt PROMPT_SUBST
 
 #Default programs
-export PATH=$HOME/.local/bin:$PATH
 export EDITOR="nvim"
 export BROWSER="firefox"
 export READER="zathura"
