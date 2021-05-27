@@ -16,7 +16,7 @@ alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias vv='vim ~/.vim/vimrc'
 alias nn='nvim ~/.config/nvim/conf/'
 alias s='cd ~/.scripts'
-alias mydm='cd ~/misc/suckless/dwm'
+alias mdm='cd ~/misc/suckless/dwm'
 
 #Actions
 alias dotf='/usr/bin/git --git-dir=$HOME/repos/dotfiles/ --work-tree=$HOME'

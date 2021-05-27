@@ -1,14 +1,8 @@
 " Mappings:
 let mapleader = ' '
 
-"Insert
-imap <C-[> <esc>
-
-"Visual
-vmap <C-[> <esc>
-
 "Command
-"cnoremap <C-l> <esc>
+
 cmap <C-k> <UP>
 cmap <C-j> <DOWN>
 
