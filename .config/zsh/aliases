@@ -3,10 +3,10 @@
 #General
 alias cp="cp -i"
 alias rm="rm -I"
-alias z='zathura'
+alias z='zathura 2>/dev/null'
 alias v='vim'
 alias n='nvim'
-alias sv='sxiv'
+alias si='sxiv -q'
 alias ls='ls --color=auto -h'
 alias grep='grep --color=auto'
 alias ip='ip -c'
@@ -17,6 +17,8 @@ alias vv='vim ~/.vim/vimrc'
 alias nn='nvim ~/.config/nvim/conf/'
 alias s='cd ~/.scripts'
 alias mdm='cd ~/misc/suckless/dwm'
+alias bk='cd ~/documents/books'
+alias lang='cd ~/misc/lang'
 
 #Actions
 alias dotf='/usr/bin/git --git-dir=$HOME/repos/dotfiles/ --work-tree=$HOME'

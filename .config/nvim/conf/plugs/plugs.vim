@@ -23,11 +23,13 @@ Plug 'mattn/emmet-vim'
 Plug 'turbio/bracey.vim', {'do': 'npm install -prefix server'}
 Plug '~/.config/nvim/autoload/plugged/dracula_pro'
 Plug 'arcticicestudio/nord-vim'
+Plug 'vim-python/python-syntax'
+
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
 "Inactive:
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'vim-python/python-syntax'
 "Plug 'rafi/awesome-vim-colorschemes'
 "Plug 'junegunn/goyo.vim'
 "Plug 'preservim/nerdtree'

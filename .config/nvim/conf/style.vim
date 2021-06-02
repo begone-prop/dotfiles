@@ -13,16 +13,30 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection = 0
 let g:gruvbox_improved_strings = 0
 let g:dracula_colorterm = 0
-colorscheme gruvbox
+colorscheme one
 highlight Normal guibg=none
 
 "Airline
-let g:airline_theme = 'distinguished'
+let g:airline_theme = 'luna'
 let g:airline_powerline_fonts = 1
 let g:airline#extension#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extension#tabline#formatter = 'default'
 
+"Themes from awesome vim colors schemes
+"256noir abstract afterglow alduin
+"anderson angr ayu-vim Apprentice
+"Archery Atom carbonized challenger-deep
+"deep-space deus dogrun flattened focuspoint
+"fogbell github gotham gruvbox happy hacking
+"Iceberg papercolor parsec scheakur hybrid
+"hybrid-material jellybeans lightning
+"lucid lucius materialbox meta5 minimalist
+"molokai molokayo mountaineer nord oceanicnext oceanic-material
+"*one onedark onehalf orbital paramount pink-moon purify
+"pyte rakr rdark-terminal2 seoul256
+"sierra solarized8 sonokai space-vim-dark spacecamp
+"sunbather tender termschool twilight256 two-firewatch wombat256
 
 "Airline themes:
 "simple light deus powerlineish solarized light solarized dark
