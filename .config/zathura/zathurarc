@@ -1,3 +1,4 @@
 set selection-clipboard clipboard
 set statusbar-basename true
 set window-title-basename true
+use strict

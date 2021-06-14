@@ -1,7 +1,10 @@
 #Load/source colors
-autoload -U colors && colors
-source $XDG_CACHE_HOME/wal/colors-tty.sh
+autoload -U colors && colors source $XDG_CACHE_HOME/wal/colors-tty.sh
+#cat ~/.cache/wal/sequences
 setopt PROMPT_SUBST
+[[ "$COLORTERM" == (24bit|truecolor) ||
+    "${terminfo[colors]}" -eq '16777216' ]] || zmodload zsh/nearcolor
+
 
 #Default programs
 export EDITOR="nvim"

@@ -34,3 +34,4 @@ export MANPAGER="nvim -c 'set ft=man' -"
 
 #Exec on login
 $HOME/.local/bin/blight l
+cat $XDG_CACHE_HOME/wal/sequences
