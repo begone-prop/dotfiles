@@ -22,5 +22,6 @@ nnoremap <M-l> :vertical resize -2<CR>
 "Run program/script
 map <leader>r :w! \| !runner <c-r>%<CR>
 
+map <leader>b :Beautify
 "Shell
 autocmd FileType sh nnoremap <leader>s :w<CR>:!shellcheck %<CR>

@@ -19,6 +19,14 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=$XDG_CACHE_HOME/zsh/history
 
+#Remove duplicates from history file
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+
 #Autocd and don't freeze term with C-s
 setopt autocd
 stty stop undef

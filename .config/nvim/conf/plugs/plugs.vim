@@ -24,6 +24,9 @@ Plug 'turbio/bracey.vim', {'do': 'npm install -prefix server'}
 Plug '~/.config/nvim/autoload/plugged/dracula_pro'
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-python/python-syntax'
+Plug 'zeekay/vim-beautify'
+Plug 'uiiaoo/java-syntax.vim'
+Plug 'prettier/vim-prettier'
 
 Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()

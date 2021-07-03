@@ -28,6 +28,7 @@ set undofile
 " Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufWritePost ~/.Xresources !xrdb % && xdotool key alt+shift+F5
+autocmd VimLeave *.tex !~/.scripts/texclear %
 
 " Delete trailing whitespace and newlines
 autocmd BufWritePre * %s/\s\+$//e
