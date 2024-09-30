@@ -50,7 +50,8 @@ precmd() { vcs_info }
 
 setopt PROMPT_SUBST
 PROMPT='%n@%M %c %B->%f '
-RPROMPT='${vcs_info_msg_0_}'
+PROMPT='%B%F{#5e81ac}%n%F{#b48ead}@%F{#a3be8c}%M %F{#d08770}%c %F{#5e81ac}-> %f'
+RPROMPT='%F{#d08770}${vcs_info_msg_0_}%f'
 
 if tmux has-session; then
     test -z "$TMUX" && tmux attach
