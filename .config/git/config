@@ -1,0 +1,5 @@
+[user]
+	email = anon@anon
+	name = anon
+[alias]
+	suno = status -bsuno
