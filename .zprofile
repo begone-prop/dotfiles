@@ -5,6 +5,8 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export EDITOR="nvim"
 export PATH="${HOME}/.local/bin:${PATH}"
 
+export DOTFILES_BARE_REPO="${HOME}/repos/dotfiles"
+
 #Clean up
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export LESSHISTFILE="-"

@@ -8,3 +8,6 @@ alias grep='grep --color=auto'
 alias v='vim'
 alias n='nvim'
 alias ip='ip -c'
+
+test -d "$DOTFILES_BARE_REPO" \
+    && alias dotf="git --git-dir=${DOTFILES_BARE_REPO} --work-tree=${HOME}"
