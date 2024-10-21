@@ -53,8 +53,14 @@ PROMPT='%n@%M %c %B->%f '
 PROMPT='%B%F{#5e81ac}%n%F{#b48ead}@%F{#a3be8c}%M %F{#d08770}%c %F{#5e81ac}-> %f'
 RPROMPT='%F{#d08770}${vcs_info_msg_0_}%f'
 
+# pyenv config
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 if tmux has-session; then
     test -z "$TMUX" && tmux attach
 else
-    tmux new -s def -n "$HOST"
+    tmux new -s "$HOST" -n 'local'
 fi
