@@ -1,8 +1,11 @@
 local configdir = vim.fn.stdpath("config") .. "/undodir"
 local undodir = configdir .. "/undodir"
 
+vim.g.mapleader = " "
+
 local opt = vim.opt
 local key = vim.keymap.set
+local shortcut = function(keys, action) key("", "<leader>" .. keys, action) end
 
 opt.number = true
 opt.relativenumber = true
@@ -37,7 +40,6 @@ opt.splitbelow = true
 opt.formatoptions = {c = false, r = false, o = false}
 opt.completeopt = {menu = true, menuone = true, select = false}
 
-vim.g.mapleader = " "
 
 vim.api.nvim_create_autocmd({"BufWritePre"}, {
     pattern = "*", command = [[%s/\s\+$//e]],
@@ -58,10 +60,12 @@ key("n", "<M-l>", ":vertical resize -2<CR>")
 
 key("c", "<C-k>", "<UP>")
 key("c", "<C-j>", "<DOWN>")
-key("", "<leader>r", ":w! | !runner.sh %<CR>")
+
+shortcut("r", ":w! | !runner.sh %<CR>")
 
 -- load plugin manager
 require("config.lazy")
 
+shortcut("U", vim.cmd.UndotreeToggle)
+
 vim.cmd.colorscheme("nightfox")
-vim.g.airline_theme = "deus"

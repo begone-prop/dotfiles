@@ -20,14 +20,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         {"vim-airline/vim-airline"},
-        {"vim-airline/vim-airline-themes"},
+        {"vim-airline/vim-airline-themes", config = function() vim.g.airline_theme = "deus" end},
         {"EdenEast/nightfox.nvim"},
         {"tpope/vim-surround"},
         {"tpope/vim-repeat"},
         {"preservim/nerdcommenter"},
         {"mbbill/undotree"},
-
-
+        {'windwp/nvim-autopairs', event = "InsertEnter", config = true},
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
