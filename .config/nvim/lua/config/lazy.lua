@@ -27,10 +27,9 @@ require("lazy").setup({
         {"preservim/nerdcommenter"},
         {"mbbill/undotree"},
         {'windwp/nvim-autopairs', event = "InsertEnter", config = true},
+        {import = "plugins"},
   },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+    install = { colorscheme = { "habamax" } },
+    checker = { enabled = true },
+    change_detection = { notify = false },
 })
