@@ -1,14 +1,22 @@
 return {
-    'nvim-telescope/telescope.nvim',
+    "nvim-telescope/telescope.nvim",
     tag = '0.1.8',
-    dependencies = {'nvim-lua/plenary.nvim'},
+    dependencies = {"nvim-lua/plenary.nvim"},
     config = function()
-        local builtin = require('telescope.builtin')
-	local util = require("config.util")
+        local builtin = require("telescope.builtin")
+	    local util = require("config.util")
 
-	util.shortcut("fg", builtin.live_grep, { desc = "Telescope live grep" })
-	util.shortcut("ff", builtin.find_files, { desc = "Telescope find files" })
-	util.shortcut("lf", builtin.git_files, { desc = "Telescope find git files" })
-    util.shortcut("fs", builtin.grep_string)
+        util.shortcut("of", builtin.find_files)
+        util.shortcut("oF", function()
+            builtin.find_files{search_dirs = {os.getenv("HOME")}}
+        end)
+        util.shortcut("ow", builtin.grep_string)
+        util.shortcut("oW", function()
+            builtin.grep_string{search = vim.fn.expand("<cWORD>")}
+        end)
+        util.shortcut("o/", builtin.live_grep)
+        --util.shortcut("ob", builtin.oldfiles)
+        util.shortcut("oM", builtin.man_pages)
+        util.shortcut("oC", builtin.colorscheme)
     end
 }

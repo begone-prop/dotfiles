@@ -18,18 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-    spec = {
-        {"vim-airline/vim-airline"},
-        {"vim-airline/vim-airline-themes", config = function() vim.g.airline_theme = "deus" end},
-        {"EdenEast/nightfox.nvim"},
-        {"tpope/vim-surround"},
-        {"tpope/vim-repeat"},
-        {"preservim/nerdcommenter"},
-        {"mbbill/undotree"},
-        {'windwp/nvim-autopairs', event = "InsertEnter", config = true},
-        {import = "plugins"},
-  },
+    spec = { import = "plugins"},
     install = { colorscheme = { "habamax" } },
     checker = { enabled = true },
+    lockfile = vim.fn.stdpath("config") .. "/lua/plugins/lazy-lock.json",
     change_detection = { notify = false },
 })

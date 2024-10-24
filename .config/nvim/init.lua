@@ -30,7 +30,7 @@ vim.o.swapfile = false
 vim.o.backup = false
 vim.o.undofile = true
 vim.o.undodir = undodir
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = "unnamedplus"
 
 vim.o.splitright = true
 vim.o.splitbelow = true
@@ -59,7 +59,6 @@ util.shortcut("r", ":w! | !runner.sh %<CR>")
 -- load plugin manager
 require("config.lazy")
 
-util.shortcut("U", vim.cmd.UndotreeToggle)
 util.shortcut("<leader>", function() vim.cmd("so"); print("Reloaded nvim config") end)
 
 vim.cmd.colorscheme("nightfox")
