@@ -57,6 +57,12 @@ vim.keymap.set("c", "<C-j>", "<DOWN>")
 
 util.shortcut("r", ":w! | !runner.sh %<CR>")
 
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown,gitcommit",
+    command = "setlocal spell",
+})
+
 -- load plugin manager
 require("config.lazy")
 
