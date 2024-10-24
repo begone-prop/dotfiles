@@ -24,7 +24,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.termguicolors = true
 vim.o.updatetime = 50
--- opt.signcolumn = "number"
+vim.o.signcolumn = "yes"
 vim.o.showmode = false
 vim.o.swapfile = false
 vim.o.backup = false
@@ -53,6 +53,7 @@ vim.keymap.set("n", "<M-l>", ":vertical resize -2<CR>")
 
 vim.keymap.set("c", "<C-k>", "<UP>")
 vim.keymap.set("c", "<C-j>", "<DOWN>")
+
 
 util.shortcut("r", ":w! | !runner.sh %<CR>")
 
