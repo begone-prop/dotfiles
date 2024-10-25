@@ -38,9 +38,17 @@ vim.o.splitbelow = true
 vim.opt.formatoptions = {c = false, r = false, o = false}
 vim.opt.completeopt = {menu = true, menuone = true, select = false}
 
-vim.api.nvim_create_autocmd({"BufWritePre"}, { pattern = "*", command = [[%s/\s\+$//e]], })
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+    group = vim.api.nvim_create_augroup("strip-trailing-whitespace", { clear = true }),
+    pattern = "*",
+    command = [[%s/\s\+$//e]],
+})
 
-vim.api.nvim_create_autocmd({"BufWritePre"}, { pattern = "*", command = [[%s/\n\+\%$//e]], })
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+    group = vim.api.nvim_create_augroup("strip-trailing-newlines", { clear = true }),
+    pattern = "*",
+    command = [[%s/\n\+\%$//e]],
+})
 
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -58,6 +66,7 @@ vim.keymap.set("c", "<C-j>", "<DOWN>")
 util.shortcut("r", ":w! | !runner.sh %<CR>")
 
 vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("spellcheck-markdown", { clear = true }),
     pattern = "markdown,gitcommit",
     command = "setlocal spell",
 })
