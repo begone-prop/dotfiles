@@ -57,7 +57,6 @@ vim.keymap.set("c", "<C-j>", "<DOWN>")
 
 util.shortcut("r", ":w! | !runner.sh %<CR>")
 
-
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown,gitcommit",
     command = "setlocal spell",
@@ -66,6 +65,4 @@ vim.api.nvim_create_autocmd("FileType", {
 -- load plugin manager
 require("config.lazy")
 
-util.shortcut("<leader>", function() vim.cmd("so"); print("Reloaded nvim config") end)
-
-vim.cmd.colorscheme("nightfox")
+vim.cmd.colorscheme("catppuccin-mocha")
