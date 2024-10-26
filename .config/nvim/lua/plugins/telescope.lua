@@ -7,7 +7,7 @@ return {
         "camgraff/telescope-tmux.nvim",
         "LukasPietzschmann/telescope-tabs",
     },
-    config = function()
+    init = function()
         local builtin = require("telescope.builtin")
 	    local util = require("config.util")
 
