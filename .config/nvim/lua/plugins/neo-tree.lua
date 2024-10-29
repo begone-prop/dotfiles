@@ -11,5 +11,10 @@ return {
     init = function()
         local util = require("config.util")
         util.shortcut("F", ":Neotree toggle reveal=true<CR>")
-    end
+    end,
+
+    opts = {
+        enable_git_status = true,
+        enable_diagnostics = false,
+    }
 }

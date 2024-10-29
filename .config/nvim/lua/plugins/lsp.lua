@@ -58,6 +58,7 @@ return {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp-signature-help",
         --"j-hui/fidget.nvim",
     },
 
@@ -109,6 +110,7 @@ return {
                 { name = "nvim_lsp" },
                 { name = "buffer" },
                 { name = "path" },
+                { name = "nvim_lsp_signature_help" },
             }
         }
 
