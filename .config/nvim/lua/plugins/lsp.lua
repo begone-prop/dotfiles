@@ -26,7 +26,7 @@ end
 local highlight_refs_on_cursor_hold = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
     if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
-        local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
+        local highlight_augroup = vim.api.nvim_create_augroup("highlight_refs", { clear = false })
         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             buffer = ev.buf,
             group = highlight_augroup,
@@ -40,10 +40,10 @@ local highlight_refs_on_cursor_hold = function(ev)
         })
 
         vim.api.nvim_create_autocmd("LspDetach", {
-            group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
+            group = vim.api.nvim_create_augroup("lsp-detach", { clear = true }),
             callback = function(event2)
                 vim.lsp.buf.clear_references()
-                vim.api.nvim_clear_autocmds { group = "kickstart-lsp-highlight", buffer = event2.buf }
+                vim.api.nvim_clear_autocmds { group = "highlight_refs", buffer = event2.buf }
             end,
         })
     end
@@ -83,9 +83,18 @@ return {
                 vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
                 local opts = { buffer = ev.buf }
+                local tp = require('telescope.builtin')
+
+                vim.keymap.set("n", "gd", tp.lsp_definitions)
+                vim.keymap.set("n", 'gr', tp.lsp_references)
+                vim.keymap.set("n", "gI", tp.lsp_implementations)
+                vim.keymap.set("n", "got", tp.lsp_type_definitions)
+                vim.keymap.set("n", "goi", tp.lsp_incoming_calls)
+                vim.keymap.set("n", "goo", tp.lsp_outgoing_calls)
+
                 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-                vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-                vim.keymap.set("n", "<leader>nn", vim.lsp.buf.rename, opts)
+                vim.keymap.set("n", "gA", vim.lsp.buf.code_action, opts)
+                vim.keymap.set("n", "gn", vim.lsp.buf.rename, opts)
 
                 highlight_refs_on_cursor_hold(ev)
             end
@@ -120,7 +129,7 @@ return {
                 focusable = false,
                 style = "minimal",
                 border = "rounded",
-                source = "always",
+                source = true,
                 header = "",
                 prefix = "",
             },
