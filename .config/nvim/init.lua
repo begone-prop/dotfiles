@@ -68,6 +68,8 @@ vim.keymap.set("c", "<C-j>", "<DOWN>")
 
 util.shortcut("r", ":w! | !runner.sh %<CR>")
 
+vim.keymap.set("n", "J", "mzJ`z")
+
 vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("spellcheck-markdown", { clear = true }),
     pattern = "markdown,gitcommit",
