@@ -3,6 +3,8 @@ autoload -Uz promptinit && promptinit
 
 # History
 
+setopt INC_APPEND_HISTORY
+# setopt SHARE_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
@@ -10,8 +12,8 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 
-HISTSIZE=10000
-SAVEHIST=10000
+export SAVEHIST=10000
+export HISTSIZE=10000
 HISTFILE="${XDG_CACHE_HOME}/zsh/history"
 
 setopt autocd

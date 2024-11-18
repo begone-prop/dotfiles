@@ -16,5 +16,6 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export GRADLE_USER_HOME="${XDG_DATA_HOME}/gradle"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
+export GNUPGHOME="${XDG_CONFIG_HOME}/gnupg"
 
 export MANPAGER='nvim +Man!'
