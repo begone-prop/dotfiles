@@ -59,12 +59,12 @@ nnoremap <M-l> :vertical resize -2<CR>
 "
 " curl -LSsfo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "
-call plug#begin('~/.vim/autoload/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'preservim/nerdcommenter'
-Plug 'jiangmiao/auto-pairs'
-Plug 'ap/vim-css-color'
-call plug#end()
+" call plug#begin('~/.vim/autoload/plugged')
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-repeat'
+" Plug 'preservim/nerdcommenter'
+" Plug 'jiangmiao/auto-pairs'
+" Plug 'ap/vim-css-color'
+" call plug#end()
