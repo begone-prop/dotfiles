@@ -65,6 +65,7 @@ vim.keymap.set("n", "<M-l>", ":vertical resize -2<CR>")
 vim.keymap.set("c", "<C-k>", "<UP>")
 vim.keymap.set("c", "<C-j>", "<DOWN>")
 
+vim.keymap.set("n", "<M-o>", function() vim.o.cul = not vim.o.cul end)
 
 util.shortcut("r", ":w! | !runner.sh %<CR>")
 
