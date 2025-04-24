@@ -59,6 +59,9 @@ test -d "$ZSH_CONF_DIR" || mkdir "$ZSH_CONF_DIR"
 find -H "$ZSH_CONF_DIR" -name '*.sh' -executable -type f \
     | while read -r conf_script; do source "$conf_script"; done
 
+# emit prompt position with escape seq. OSC 133
+preexec() { echo -n "\\x1b]133;A\\x1b\\" }
+
 if tmux has-session; then
     test -z "$TMUX" && tmux attach
 else
