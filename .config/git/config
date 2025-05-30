@@ -1,5 +1,42 @@
 [user]
-	email = anon@anon
-	name = anon
+    email = anon@anon
+    name = anon
+
 [alias]
-	suno = status -bsuno
+    suno = status -bsuno
+    logo = log --oneline
+    logog = log --oneline --graph
+
+[commit]
+    verbose = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[init]
+    defaultBranch = main
+
+[branch]
+    sort = -committerdate
+
+[status]
+    showStash = true
+
+[tag]
+    sort = version:refname
+
+[core]
+    editor = nvim -c 'set spell'
+
+[commit]
+    verbose = true
+
+[fetch]
+    writeCommitGraph = true
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
