@@ -5,7 +5,8 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CACHE_HOME="${HOME}/.cache"
 
 export EDITOR="nvim"
-export PATH="${HOME}/.local/bin:${PATH}"
+PATH="${HOME}/.local/bin:${PATH}"
+export PATH="${XDG_DATA_HOME}/cargo/bin:${PATH}"
 
 export DOTFILES_BARE_REPO="${HOME}/repos/dotfiles"
 
